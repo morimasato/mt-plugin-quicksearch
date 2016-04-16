@@ -1,0 +1,25 @@
+name: <__trans phrase="Quick Search">
+id: QuickSearch
+version: 1.0
+doc_link: https://github.com/morimasato/mt-plugin-quicksearch
+plugin_link: http://www.quick-solution.com/quicksearch
+author_name: <__trans phrase="QUICK SOLUTION">
+author_link: http://www.quick-solution.com
+description: <__trans phrase="Automatically update the search index of QuickSearch.">
+l10n_class: QuickSearch::L10N
+
+settings:
+    content_key:
+        scope: system
+    api_secret_key:
+        scope: system
+
+system_config_template: system_config.tmpl
+blog_config_template: blog_config.tmpl
+
+callbacks:
+    MT::App::CMS::cms_post_save.entry: $QuickSearch::QuickSearch::_post_save
+    MT::App::CMS::cms_post_save.page: $QuickSearch::QuickSearch::_post_save
+    MT::App::CMS::cms_post_delete.entry: $QuickSearch::QuickSearch::_post_delete
+    MT::App::CMS::cms_post_delete.page: $QuickSearch::QuickSearch::_post_delete
+    save_config_filter.QuickSearch: $QuickSearch::QuickSearch::_save_config_filter
