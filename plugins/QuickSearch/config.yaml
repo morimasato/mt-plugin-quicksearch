@@ -1,6 +1,6 @@
 name: <__trans phrase="Quick Search">
 id: QuickSearch
-version: 1.0
+version: 1.01
 doc_link: https://github.com/morimasato/mt-plugin-quicksearch
 plugin_link: http://www.quick-solution.com/quicksearch
 author_name: <__trans phrase="QUICK SOLUTION">

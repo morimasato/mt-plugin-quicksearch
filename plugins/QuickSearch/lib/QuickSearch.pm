@@ -12,7 +12,7 @@ use HTTP::Request::Common;
 use JSON;
 use Encode;
 
-our $QUICKSEARCH_URI = 'https://secure.quick-solution.com/';
+our $QUICKSEARCH_URI = 'https://www.quick-solution.com/';
 
 sub __full_text_search_plugin
 {
